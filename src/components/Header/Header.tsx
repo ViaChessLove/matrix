@@ -8,7 +8,8 @@ const Header = () => {
             <NavbarContainer>
                 <NavMenu>
                     {items.map((item) => {
-                        return <NavItem>{item}</NavItem>
+                        console.log(item.split(' ')[0].toLowerCase());
+                        return <NavItem color={item.split(" ")[0].toLowerCase()}>{item}</NavItem>
                     })}
                 </NavMenu>
             </NavbarContainer>

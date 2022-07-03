@@ -36,4 +36,27 @@ export const NavItem = styled.li`
     height: 80px;
 	cursor: pointer;
     color: #fff;
+    overflow: hidden;
+	white-space: nowrap;
+	position: relative;
+	&:before {
+		color: darkgreen;
+		content: '';
+		position: absolute;
+        top: 0;
+        right: 0;
+		transform: translate(-100%, 100%);
+		z-index: -1;
+		transition: all 3s ease;
+		width: 100%;
+		height: 100%;
+		transform: translate(100%, -50%) rotate(90deg);
+	}
+	&:hover:before {
+		height: 500%;
+        border-bottom: 1rem solid;
+	}
+	&:hover {
+		color: ${(props) => props.color};
+	}
 `;
