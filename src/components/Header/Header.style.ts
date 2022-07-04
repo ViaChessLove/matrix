@@ -7,9 +7,10 @@ export const Nav = styled.nav`
     margin-bottom: -80px;
     height: 80px;
     justify-content: center;
-    font-size: 2rem;
-    position: absolute;
+    font-size: 2.5rem;
+    position: fixed;
     top: 0;
+	left: 0;
     z-index: 50;
     width: 100%;
     transition: background-color 0.3s ease-in;
@@ -22,13 +23,14 @@ export const NavbarContainer = styled(Container)`
 	${Container}
 `;
 
-export const NavMenu = styled.ul`
+export const NavMenu = styled.ul<{background: boolean}>`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     list-style: none;
 	text-align: center;
 	width: 100%;
+	transition: all 2s ease;
 `;
 
 

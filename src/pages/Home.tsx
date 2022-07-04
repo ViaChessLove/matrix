@@ -8,7 +8,7 @@ const Home = () => {
     return (
         <>
             <Hero/>
-            <Content content={first} src='./assets/pngegg.png' title='Hello, Stranger' subtitle='Or maybe not...'/>
+            <Content content={first} background='./assets/matrix.webp' src='./assets/pngegg.png' title='Hello, Stranger' subtitle='Or maybe not...'/>
         </>
     )
 }
