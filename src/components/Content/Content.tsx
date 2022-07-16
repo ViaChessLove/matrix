@@ -4,7 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import { Container } from '../../globalStyles';
 import { ContentBackground, ContentCard, ContentContainer, ContentSubtitle, ContentText, ContentTextBox, ContentTitle } from './ContentStyles';
 
-interface ComponentProps {
+export interface ContentProps {
     src: string;
     title: string;
     subtitle?: string;
@@ -12,7 +12,7 @@ interface ComponentProps {
     background?: string;
 }
 
-const Content: React.FC<ComponentProps> = ({src, title, subtitle, content, background}) => {
+const Content: React.FC<ContentProps> = ({src, title, subtitle, content, background}) => {
   const initial = {opacity: 0, x: -40};
   const animation = useAnimation();
   const {ref, inView} = useInView({threshold: 0.3});
